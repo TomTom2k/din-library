@@ -1,0 +1,23 @@
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #eff2f9;
+
+    --text-900: #333;
+    --text-700: #2f2d38;
+    --text-100: #ebebeb;
+    --text-50: #fff;
+
+    --main-color: #4f48ec;
+    --secondary-color: #08c5f9;
+}
+
+$primary-bg: var(--primary-bg);
+$secondary-bg: var(--secondary-bg); 
+
+$text-50: var(--text-50);
+$text-100: var(--text-100);
+$text-700: var(--text-700);
+$text-900: var(--text-900);
+
+$main-color: var(--main-color);
+$secondary-color: var(--secondary-color);

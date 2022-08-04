@@ -1,0 +1,13 @@
+.routes {
+    @include flex(center, space-evenly);
+
+    a {
+        font-size: 1.6rem;
+        color: $text-50;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+    }
+    a:hover {
+        border-bottom: 2px solid $secondary-color;
+    }
+}

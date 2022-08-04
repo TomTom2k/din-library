@@ -1,0 +1,57 @@
+.event {
+    @include flex(start, center);
+    width: 45rem;
+    height: 24rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    flex: 1 1 100%;
+
+    &__image {
+        width: 14rem;
+        height: 20rem;
+        overflow: hidden;
+        box-shadow: 0.5rem 0.5rem 1rem rgba(0,0,0,0.5),-0.5rem -0.5rem 1rem rgba(255, 255, 255, 0.5);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    &__info {
+        width: calc(100% - 14rem);
+        padding-left: 1rem;
+
+        &__title {
+            font-size: 1.6rem;
+            color: $text-50;
+            font-weight: 600;
+            text-shadow: 0 0 1rem rgba(0,0,0,1);
+        }
+        &__rating {
+            @include flex(center,start);
+            &__rate {
+                margin: 0.5rem 0 1.5rem;
+                color: rgb(247, 189, 30);
+                font-size: 1.4rem;
+                svg {
+                    filter:  drop-shadow(0 0 1rem rgb(247, 189, 30, 0.5));
+                }
+            }
+            span {
+                margin-left: 0.5rem;
+                color: #dfdfdf;
+                text-shadow: 0 0 1rem #000;
+            }
+        }
+        
+        &__describe {
+            margin-top: 1rem;
+            color: $text-100;
+            text-shadow: 0 0 1rem rgba(0,0,0,0.5);
+        }
+    }
+    
+
+}

@@ -1,0 +1,14 @@
+@import './variable.scss';
+@import './mixins';
+@import './base.scss';
+
+@import '../components/index.scss';
+@import '../Routes/index.scss';
+
+@import '../pages/HomePage/index.scss';
+@import '../pages/LoginPage/index.scss';
+@import '../pages/RegisterPage/index.scss';
+@import '../pages/ListPage/index.scss';
+@import '../pages/SingerPage/index.scss';
+@import '../pages/ContactPage/index.scss';
+@import '../pages/AccountPage/index.scss'

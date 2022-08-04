@@ -1,0 +1,103 @@
+.wrapper-contact {
+    width: 100%;
+    @include flex(stretch, center);
+    .contact {
+        margin-top: 4rem;
+        width: 100%;
+        max-width: 102.4rem;
+        background: $secondary-bg;
+        border-radius: 2rem;
+        padding: 2rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+        position: relative;
+        @include flex(stretch, center);
+        overflow: hidden;
+        
+        &__form {
+            width: 60%;
+            @include flex(center, center);
+            flex-direction: column;
+            padding: 2rem 0;
+
+            &__title {
+                font-size: 2.4rem;
+            }
+
+            &__sub {
+                font-size: 1.2rem;
+                color: $text-700;
+                margin-bottom: 2rem;
+            }
+
+            form {
+                padding: 0 4rem;
+                label {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+                input {
+                    width: 100%;
+                    padding: 0.5rem 1rem;
+                    outline: none;
+                    margin-bottom: 1.5rem;
+                }
+
+                .text {
+                    width: 100%;
+                    @include flex(center, center);
+                    color: $main-color;
+                }
+
+                .button {
+                    width: 100%;
+                    @include flex(center, center);
+                }
+
+                textarea {
+                    @extend input;
+                }
+            }
+        }
+        &__info {
+            @include flex(center, start);
+            flex-direction: column;
+            transform: translateX(2rem);
+            width: 40%;
+            background: $main-color;
+            color: $text-50;
+            padding: 2rem 4rem;
+            border-radius: 1rem;
+            margin: -2rem 0;
+
+            &__title {
+                margin-top: 1rem;
+                font-size: 2.4rem;
+                color: $text-50;
+                font-weight: 600;
+                margin-bottom: 2rem;
+            }
+
+            &__list {
+                width: 100%;
+                margin-top: 1rem;
+
+                &__item {
+                    @include flex(center, start);
+                    p {
+                        font-size: 3rem;
+                        font-weight: 500;
+                        margin-right: 2rem;
+
+                        svg {
+                            height: 3rem;
+                            width: 3rem;
+                        }
+                    }
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}

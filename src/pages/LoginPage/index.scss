@@ -1,0 +1,41 @@
+
+.wrapper {
+    @include flex(center, center);
+    width: 100%;
+
+    .login {
+        margin-top: 4rem;
+        width: 100%;
+        max-width: 40rem;
+        background-color: $secondary-bg;
+        border-radius: 2rem;
+        padding: 2rem;
+        @include box-shadow; 
+        @include flex(center, start);
+        flex-direction: column;
+
+        &__title {
+            width: 100% ;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: $main-color;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        &__route-regis {
+            width: 100%;
+            text-align: start;
+            margin-top: 2rem;
+            p {
+                font-size: 1.2rem;
+
+                a {
+                    font-weight: 600;
+                    margin: 0 0.2rem;
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}

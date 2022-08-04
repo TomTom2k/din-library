@@ -1,0 +1,24 @@
+.input-form {
+    width: 100%;
+    @include flex(start, start);
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    label {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 0.4rem;
+        cursor: pointer;
+    }
+
+    input {
+        width: 100% ;
+        padding: 0.5rem 1rem;
+        border: 1px solid $text-900;
+        border-radius: 0.5rem;
+    }
+    input:focus{
+        border: 1px solid $main-color;
+        box-shadow: 0 0.5rem 1rem -0.5rem $main-color;
+    }
+}

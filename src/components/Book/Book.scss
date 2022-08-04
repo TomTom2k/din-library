@@ -1,0 +1,46 @@
+.book-item {
+    width: 25rem;
+    height: 18rem;
+    @include flex(start,center);
+    background: $secondary-bg;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+
+    &__image {
+        width: 10rem;
+        height: 15rem;
+        @include box-shadow;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        width: calc(100% - 10rem);
+        padding-left: 1rem;
+
+        &__title {
+            font-size: 1.4rem;
+            color: $text-900;
+        }
+        &__rate {
+            @include flex(center, start);
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: $text-700;
+
+            svg {
+                width: 1.6rem;
+                color: rgb(247, 189, 30);
+            }
+        }
+    }
+}
+
+.book-item:hover {
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+}
