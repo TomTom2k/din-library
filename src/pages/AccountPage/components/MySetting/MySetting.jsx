@@ -1,7 +1,11 @@
 import React from 'react';
 
 const MySetting = () => {
-	return <div>MySetting</div>;
+	return (
+		<div>
+			<h1>Đang cập nhật</h1>
+		</div>
+	);
 };
 
 export default MySetting;

@@ -1,0 +1,67 @@
+@import './components/Aside/Aside.scss';
+@import './components/Books/Books.scss';
+
+.list-page {
+    .show-aside {
+        @include flex(center, center);
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        left: 29rem;
+        top: 10rem;
+        background: rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(5.5px);
+        -webkit-backdrop-filter: blur(5.5px);
+        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        z-index: -1;
+        display: none;
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+            cursor: pointer;
+            color: $text-700;
+        }
+    }
+
+    .show-aside:hover {
+        opacity: 0.8;
+    }
+    
+
+    aside {
+        width: 30rem;
+        position: fixed;
+        top: 8rem;
+        left: 0;
+        z-index: 100;
+        transition: all 0.25s ease;
+
+        
+    }
+
+    main {
+        margin-left: 30rem;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .list-page {
+        .show-aside {
+            display: flex;
+        }
+        aside {
+            transform: translateX(-30rem);
+        }
+        aside.active {
+            transform: translateX(0);
+        }
+
+        main {
+            margin-left: 0;
+        }
+    }
+}

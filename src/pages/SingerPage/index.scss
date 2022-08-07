@@ -1,0 +1,59 @@
+
+.book-page {
+    display: flex;
+    height: calc(100vh - 8rem);
+    main {
+        width: calc(100% - 30rem);
+        padding: 2rem;
+        padding-right: 20rem;
+
+        .t-page {
+            display: flex;
+            &__image {
+                width: 20rem;
+                height: 22rem;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                }
+            }
+            &__info {
+                padding: 0 2rem;
+
+                &__title {
+                    font-size: 2.4rem;
+                    color: $text-900;
+                }
+
+                &__rate {
+                    color: rgb(247, 189, 30);
+                }
+
+                &__describe {
+                    margin: 1rem 0 2rem;
+                    color: $text-700;
+                }
+
+                &__content {
+                    a {
+                        color: $text-50;
+                    }
+                }
+            }
+        }
+    }
+
+    aside {
+        @include flex(center, start);
+        flex-direction: column;
+        width: 30rem;
+        height: calc(100vh - 8rem);
+        overflow: auto;
+        background: $secondary-color;
+        a {
+            margin-bottom: 1rem;
+        }
+    }
+}

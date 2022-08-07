@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { UilStar } from '@iconscout/react-unicons';
 
-const Event = ({ id, color1, color2, nameBook }) => {
+const Event = ({ color1, color2, nameBook }) => {
 	let [book, setBook] = useState([]);
 	let star = [];
 	let event = createRef();
@@ -39,7 +39,7 @@ const Event = ({ id, color1, color2, nameBook }) => {
 
 	return (
 		<Link
-			to={`book/${nameBook}`}
+			to={`/book/${nameBook}`}
 			id={nameBook}
 			className="event"
 			ref={event}

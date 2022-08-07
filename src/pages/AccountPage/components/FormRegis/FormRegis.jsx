@@ -1,7 +1,11 @@
 import React from 'react';
 
 const FormRegis = () => {
-	return <div>FormRegis</div>;
+	return (
+		<div>
+			<h1>Đang cập nhật</h1>
+		</div>
+	);
 };
 
 export default FormRegis;
