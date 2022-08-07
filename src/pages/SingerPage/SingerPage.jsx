@@ -9,11 +9,11 @@ const SingerPage = () => {
 	let [books, setBooks] = useState([]);
 	let star = [];
 	useEffect(() => {
-		fetch(`/api/book/${id}/`)
+		fetch(`https://library-website-api.herokuapp.com/api/book/${id}/`)
 			.then((res) => res.json())
 			.then((data) => setBook(data));
 
-		fetch('/api/books/')
+		fetch('https://library-website-api.herokuapp.com/api/books/')
 			.then((res) => res.json())
 			.then((data) => setBooks(data));
 	}, [id]);

@@ -9,7 +9,7 @@ const Event = ({ color1, color2, nameBook }) => {
 	let event = createRef();
 
 	useEffect(() => {
-		fetch(`/api/book/${nameBook}/`)
+		fetch(`https://library-website-api.herokuapp.com/api/book/${nameBook}/`)
 			.then((res) => res.json())
 			.then((data) => setBook(data));
 	}, []);

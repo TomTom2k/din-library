@@ -4,7 +4,7 @@ import Book from '../../../../components/Book/Book';
 const BodyHome = () => {
 	let [books, setBooks] = useState([]);
 	useEffect(() => {
-		fetch('/api/books/')
+		fetch('https://library-website-api.herokuapp.com/api/books/')
 			.then((res) => res.json())
 			.then((data) => setBooks(data));
 	});
