@@ -9,7 +9,7 @@ export let TypeBook = createContext();
 
 const ListPage = () => {
 	let [type, setType] = useState(0);
-	let [aside, setAside] = useState(true);
+	let [aside, setAside] = useState(false);
 
 	let typeData = {
 		setType: setType,

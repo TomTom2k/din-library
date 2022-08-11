@@ -7,7 +7,7 @@ const BodyHome = () => {
 		fetch('https://library-website-api.herokuapp.com/api/books/')
 			.then((res) => res.json())
 			.then((data) => setBooks(data));
-	});
+	}, []);
 	return (
 		<div className="body-home">
 			<div className="body-home__title">Sách nổi bật</div>
