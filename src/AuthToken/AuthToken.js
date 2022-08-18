@@ -25,19 +25,16 @@ const AuthProvide = ({ children }) => {
 	);
 	let login = async (e) => {
 		e.preventDefault();
-		let res = await fetch(
-			'https://library-website-api.herokuapp.com/user/token/',
-			{
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					username: e.target.username.value,
-					password: e.target.password.value,
-				}),
-			}
-		);
+		let res = await fetch(process.env.REACT_APP_API_URL + '/user/token/', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				username: e.target.username.value,
+				password: e.target.password.value,
+			}),
+		});
 		let data = await res.json();
 		if (res.status === 200) {
 			setUser(jwt_decode(data.refresh).name);
@@ -62,7 +59,7 @@ const AuthProvide = ({ children }) => {
 		e.preventDefault();
 		try {
 			let res = await fetch(
-				'https://library-website-api.herokuapp.com/user/register/',
+				process.env.REACT_APP_API_URL + '/user/register/',
 				{
 					method: 'POST',
 					headers: {

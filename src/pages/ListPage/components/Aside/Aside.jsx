@@ -6,7 +6,7 @@ const Aside = () => {
 	let { setType } = useContext(TypeBook);
 
 	useEffect(() => {
-		fetch('https://library-website-api.herokuapp.com/api/tags/')
+		fetch(process.env.REACT_APP_API_URL + '/api/tags/')
 			.then((res) => res.json())
 			.then((data) => setTags(data));
 	}, []);

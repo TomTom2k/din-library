@@ -16,7 +16,7 @@ const Banner = () => {
 	let [events, setEvents] = useState([]);
 
 	useEffect(() => {
-		fetch('https://library-website-api.herokuapp.com/api/events/')
+		fetch(process.env.REACT_APP_API_URL + '/api/events/')
 			.then((res) => res.json())
 			.then((data) => setEvents(data));
 	}, []);

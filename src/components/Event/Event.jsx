@@ -7,9 +7,8 @@ const Event = ({ color1, color2, nameBook }) => {
 	let [book, setBook] = useState([]);
 	let star = [];
 	let event = createRef();
-
 	useEffect(() => {
-		fetch(`https://library-website-api.herokuapp.com/api/book/${nameBook}/`)
+		fetch(process.env.REACT_APP_API_URL + `/api/book/${nameBook}/`)
 			.then((res) => res.json())
 			.then((data) => setBook(data));
 	}, []);
