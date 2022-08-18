@@ -8,7 +8,7 @@ const Books = () => {
 	let { type } = useContext(TypeBook);
 
 	useEffect(() => {
-		fetch('https://library-website-api.herokuapp.com/api/books/')
+		fetch(process.env.REACT_APP_API_URL + '/api/books/')
 			.then((res) => res.json())
 			.then((data) =>
 				!type
